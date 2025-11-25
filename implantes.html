@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implantes dentales</title>
+    <link rel="stylesheet" href="implantes.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+   
+        <h1 class="titulo aparece">Rehabilitación Oral / Prótesis / Implantes</h1>
+    <h2 class="subtitulo aparece">Reparación de piezas dentales faltantes mediante prótesis o reconstrucción</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+                Los implantes dentales son estructuras que se colocan en el hueso de la mandíbula para reemplazar la raíz de un diente perdido.
+            </p>
+
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li>Implantes dentales: colocación de una raíz de titanio para fijar una corona o prótesis</li>
+                <li>Restaurar función y estética.</li>
+                <li>Prótesis fijas o removibles, puentes, coronas, reconstrucciones extensas.</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               Los implantes dentales ofrecen beneficios como una masticación más fuerte y natural, ya que funcionan casi igual que un diente real. Ayudan a preservar el hueso evitando que se desgaste por falta de raíz, mejoran la estética de la sonrisa y la expresión facial, y no requieren desgastar otros dientes como pasa con algunos puentes.
+            </p>
+            
+        </div>
+
+        <div class="imagen-submenu">
+            <img src="implantesdentales.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+</div>
+
+
+
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

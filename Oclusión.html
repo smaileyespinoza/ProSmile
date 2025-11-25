@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oclusión / Articulación Temporomandibular</title>
+    <link rel="stylesheet" href="Oclusión.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+   
+        <h1 class="titulo aparece">Oclusión / Articulación Temporomandibular (ATM)</h1>
+    <h2 class="subtitulo aparece">Buen funcionamiento de la mordida</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+                La oclusión y la Articulación Temporomandibular (ATM) se refieren a cómo encajan los dientes superiores e inferiores y al funcionamiento de la articulación que conecta la mandíbula con el cráneo. Una oclusión adecuada permite morder, masticar y hablar correctamente, mientras que una ATM en buen estado garantiza movimientos suaves y sin dolor.
+
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li> Análisis de la mordida</li>
+                <li>La correcta función de la articulación temporomandibular</li>
+                <li>Tratamiento de disfunciones de mordida</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               Los beneficios de mantener una buena oclusión y una ATM saludable incluyen una masticación eficiente, menor desgaste de los dientes, mejor postura mandibular y reducción de dolores faciales, de cuello y de cabeza.
+            </p>
+            
+        </div>
+
+        <div class="imagen-submenu">
+            <img src="oclusion.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+</div>
+
+
+
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

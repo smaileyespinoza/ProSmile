@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética dental</title>
+    <link rel="stylesheet" href="EstéticaDental.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+   
+        <h1 class="titulo aparece">Estética dental</h1>
+    <h2 class="subtitulo aparece">Tratamiento para mejorar la estética de la sonrisa</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+                Está enfocada en mejorar la apariencia de la sonrisa. Su objetivo es corregir imperfecciones en los dientes y encías para lograr una sonrisa armoniosa, natural y saludable.
+            </p>
+
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li>Blanquemiento dental</li>
+                <li>Carillas dentales</li>
+                <li>Contorno de encías</li>
+                <li>Diseño personalizado de sonrisa</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               Los tratamientos de estética dental permiten mejorar la apariencia de la sonrisa corrigiendo manchas, fracturas, espacios y desalineaciones leves. Además de ofrecer una imagen más armoniosa y juvenil, aumentan la confianza del paciente y contribuyen a una mejor función dental en muchos casos. Estos procedimientos son personalizados, seguros y ofrecen resultados naturales que pueden mantenerse en el tiempo con buenos cuidados.
+            </p>
+            
+        </div>
+
+        <div class="imagen-submenu">
+            <img src="esteticadental.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+</div>
+
+
+
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

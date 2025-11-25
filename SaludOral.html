@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud oral y prevención</title>
+    <link rel="stylesheet" href="SaludOral.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+   
+        <h1 class="titulo aparece">Salud oral y prevención</h1>
+    <h2 class="subtitulo aparece">Prevenir enfermedades bucales</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+                La salud oral es el estado general de la boca, dientes, encías y todo el sistema que permite hablar, masticar y sonreír adecuadamente. Incluye mantener los dientes limpios, las encías sanas y evitar enfermedades como caries, gingivitis o infecciones. También abarca hábitos de higiene diaria, una alimentación adecuada y visitas regulares al odontólogo para prevenir problemas y mantener un funcionamiento bucal óptimo.
+
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li>Estudios y tratamientos para prevenir enfermedades bucales</li>
+                <li>Higiene</li>
+                <li>Profilaxis</li>
+                <li>Educación dental</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               Prevención de caries y enfermedades periodontales, una mejor digestión gracias a una masticación adecuada, la reducción de infecciones que pueden afectar otras partes del cuerpo y una mejora en la autoestima por una sonrisa sana.
+            </p>
+            
+        </div>
+
+        <div class="imagen-submenu">
+            <img src="saludoral.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+</div>
+
+
+
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

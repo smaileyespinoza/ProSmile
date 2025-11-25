@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre ProSmile</title>
+    <link rel="stylesheet" href="LeerMas.css">
+</head>
+
+<body>
+    <div class="banner"></div>
+    <section class="seccion seccion-historia aparece">
+        <h1 id="historia" class="titulos">HISTORIA</h1>
+
+        <div class="contenedor-cuadro">
+
+          <div class="contenedor">
+          <div class="texto">
+            <p>ProSmile nació en el año 2001 con un propósito claro: ofrecer una atención odontológica moderna, humana y accesible para todos. Lo que comenzó como un pequeño consultorio impulsado por la vocación y la pasión por la salud oral, pronto se convirtió en un referente local gracias al trato cercano, la ética profesional y la calidad de sus tratamientos.
+                A lo largo de más de dos décadas, ProSmile ha evolucionado incorporando nuevas especialidades, ampliando sus instalaciones y sumando un equipo multidisciplinario altamente capacitado. La integración de tecnologías avanzadas ha permitido ofrecer diagnósticos más precisos, procedimientos menos invasivos y soluciones estéticas de alto nivel.
+                Hoy, ProSmile continúa creciendo sin perder su esencia: brindar una atención honesta, personalizada y basada en la confianza, ayudando a que cada paciente alcance una sonrisa sana y duradera.
+
+            </p>
+
+          </div>
+    </section>
+
+
+   <section class="seccion seccion-mision aparece">
+
+        <h1 id="mision" class="tituloM">MISIÓN</h1>
+
+        <div class="contenedor-cuadroM">
+
+          <div class="contenedor">
+          <div class="textoM">
+            <p>Brindar servicios odontológicos integrales con un enfoque humano, ético y profesional, utilizando tecnología de vanguardia y tratamientos personalizados para mejorar la salud, la estética y la calidad de vida de nuestros pacientes.
+
+            </p>
+
+          </div>
+        </section>
+
+
+
+        <section class="seccion seccion-valores aparece">
+
+        <h1 id="vision" class="tituloV">VALORES</h1>
+
+        <div class="contenedor-cuadroV">
+
+          <div class="contenedor">
+          <div class="textoV">
+            <p>Calidad: Nos comprometemos con altos estándares clínicos y resultados duraderos.
+                Ética y transparencia: Actuamos con honestidad, claridad y responsabilidad en cada tratamiento.
+                Calidez humana: Ofrecemos un trato cercano, respetuoso y empático, priorizando el bienestar de nuestros pacientes.
+                Innovación: Incorporamos técnicas y tecnologías modernas para ofrecer procedimientos más seguros, cómodos y efectivos.
+                Trabajo en equipo: Nuestro equipo multidisciplinario colabora para brindar soluciones integrales y una experiencia coherente de atención.
+                Prevención: Promovemos una odontología preventiva, educando a nuestros pacientes para mantener una sonrisa saludable a largo plazo.
+
+            </p>
+
+          </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odontopediatría</title>
+    <link rel="stylesheet" href="Odontopediatria.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+   
+        <h1 class="titulo aparece">ODONTOPEDIATRÍA</h1>
+    <h2 class="subtitulo aparece">Atención dental especializada para niños</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+                La odontopediatría es la rama de la odontología especializada en el cuidado de la salud bucal de bebés, niños y adolescentes.
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li>Control</li>
+                <li>Prevención</li>
+                <li>Tratamientos adaptados para edades tempranas</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               detección temprana de caries y otras enfermedades bucales, la corrección oportuna de problemas de crecimiento dental, la reducción del temor al dentista mediante técnicas adaptadas a los niños y la guía para establecer rutinas de cuidado oral que perduren en la vida adulta.
+            
+        </div>
+
+        <div class="imagen-submenu ">
+            <img src="odontopediatria.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+</div>
+
+
+
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

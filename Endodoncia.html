@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estética dental</title>
+    <link rel="stylesheet" href="Endodoncia.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+    
+
+        <section class="seccion seccion-submenu">
+
+            <h1 class="titulo aparece">Endodoncia</h1>
+    <h2 class="subtitulo aparece">Tratamiento en la pulpa dentaria</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+                La endodoncia es un tratamiento dental que se realiza para salvar un diente cuando la pulpa (el nervio interno) está inflamada o infectada. Consiste en limpiar y desinfectar los conductos internos del diente, retirar el tejido dañado y sellarlo para evitar futuras infecciones. Este procedimiento elimina el dolor, detiene el avance del daño y permite conservar el diente de forma funcional y saludable.
+            </p>
+
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li>Eliminar infecciones</li>
+                <li>Aliviar el dolor</li>
+                <li>Preservar el diente</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               La endodoncia ofrece múltiples beneficios, entre ellos eliminar el dolor causado por infecciones internas, conservar el diente natural sin necesidad de extracción y prevenir que la infección se extienda a otras áreas. Además, permite recuperar la función normal al masticar, mantiene la estética de la sonrisa y brinda resultados seguros y duraderos, ayudando a preservar la salud bucal a largo plazo.
+            </p>
+            
+        </div>
+
+        <div class="imagen-submenu">
+            <img src="endodoncia.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    </section>
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+    </div>
+        
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

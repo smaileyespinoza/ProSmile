@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirugía Oral / Maxilofacial</title>
+    <link rel="stylesheet" href="CirugíaOral.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+   
+        <h1 class="titulo aparece">Cirugía Oral / Maxilofacial</h1>
+    <h2 class="subtitulo aparece">Procedimientos quirúrgicos</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+                La cirugía oral y maxilofacial es una especialidad que trata problemas relacionados con la boca, los dientes, los huesos de la cara y la mandíbula.
+            </p>
+
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li>Extracciones simples o complejas</li>
+                <li>Estracción dde muelas del juicio</li>
+                <li>Injertos óseos</li>
+                <li>Biopsias orales</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               La cirugía oral y maxilofacial ofrece beneficios como la corrección de problemas funcionales en la mandíbula, dientes y estructuras faciales, lo que mejora la masticación, la respiración y la fonación. Permite tratar afecciones como quistes, tumores, infecciones y fracturas faciales, restaurando la salud y la simetría del rostro. También ayuda a aliviar dolor crónico causado por muelas del juicio o trastornos de la articulación temporomandibular. Además, mejora la estética facial y la calidad de vida.
+            </p>
+            
+        </div>
+
+        <div class="imagen-submenu">
+            <img src="cirugiaoral.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+</div>
+
+
+
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

@@ -1,0 +1,522 @@
+html, body {
+    margin: 0; /*elimina los margenes que trae por defecto el buscador*/
+    padding: 0;
+  }
+
+html {
+  scroll-behavior: smooth;
+}
+  
+
+.banner {
+    background-image: url('banner_Mesa\ de\ trabajo\ 1.png');  /* Imagen puesta desde CSS */
+    background-size: cover;                /* Cubre todo el espacio */
+    background-position: center;           /* Centrada */
+    height: 220px;                         /* Altura del banner */
+    width: 100%;         
+
+  }
+
+
+  /*CONTENEDORES*/
+
+
+  .contenedor-botones {
+    display: grid;                /* Usamos CSS Grid */
+    grid-template-columns: repeat(3, 1fr);  /* 2 columnas iguales */
+    gap: 50px;                    /* Espacio entre botones */
+    justify-items: center;
+    justify-content: center;      /* Centra horizontalmente el grid */
+    align-content: center;        /* Centra verticalmente si tiene altura definida */
+    width: fit-content;
+    margin: 70px auto;            /* Centra el bloque en la página */
+  }
+
+.contenedor-redes {
+    display: flex;             /* los pone en fila */
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente */
+  gap: 50px;                 /* espacio entre ellos */
+  flex-wrap: nowrap;         /* evita que salten a otra línea */
+  margin-top: 30px;          /* espacio arriba */
+}
+  
+
+  
+  /*CONTENEDORES*/
+
+
+
+  /*CLASES*/
+
+
+.redes {
+    background: none;         /* Sin fondo */
+    border: none;             /* Sin bordes del botón */
+    padding: 0;               /* Quita relleno */
+    cursor: pointer;          /* Cambia el puntero al pasar el mouse */
+    border-radius: 50%;       /* Hace el área circular */
+    width: 120px;             /* Ajustá según el tamaño de tu imagen */
+    height: 120px;
+    transition: all 0.3s ease; /* suaviza el efecto */
+}
+
+.botones {
+    background: none;         /* Sin fondo */
+    border: none;             /* Sin bordes del botón */
+    padding: 0;               /* Quita relleno */
+    cursor: pointer;          /* Cambia el puntero al pasar el mouse */
+    border-radius: 50%;       /* Hace el área circular */
+    width: 120px;             /* Ajustá según el tamaño de tu imagen */
+    height: 120px;
+    transition: all 0.3s ease; /* suaviza el efecto */
+}
+
+/*CLASES*/
+
+
+
+/*IMAGENES DE LOS BOTONES*/
+
+
+.redes img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.botones img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+}
+
+/*IMAGENES DE LOS BOTONES*/
+
+
+
+/* Al pasar el mouse sobre el conjunto */
+.item-boton:hover {
+  transform: scale(1.2); /* crece todo el bloque */
+  filter: brightness(1.2);
+}
+
+
+
+.item-boton {
+  text-align: center; /* centra el botón y el texto */
+}
+
+
+.texto-boton {
+  margin-top: 10px;     /* espacio entre el botón y el texto */
+  font-size: 1.5em;     /* tamaño del texto */
+  color: #ffffff;          /* color del texto */
+  font-family: Franklin Gothic Medium;
+}
+
+
+
+/*TÍTULOS*/
+
+
+.titulos {
+  text-align: center;       /* Centra el texto */
+  font-size: 4em;           /* Tamaño de letra grande */
+  margin-top: 150px;         /* Espacio entre el banner y el título */
+  margin-bottom: 150px;      /* Espacio entre el título y los botones */
+  font-family: Franklin Gothic Medium;  /* Tipografía limpia */
+  color: #429cbe;              /* Color del texto */
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px); /* movimiento suave */
+  }
+}
+
+.titulos::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background: #f6aa19;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/*TÍTULOS*/
+
+
+.subtitulo {
+    text-align: left;       /* Centra el texto */
+    margin-left: 70px;
+  font-size: 35px;           /* Tamaño de letra grande */
+  font-family: Franklin Gothic Medium;  /* Tipografía limpia */
+  color: #429cbe;     
+  margin-bottom: 30px;
+}
+.texto {
+    text-align: left;
+    padding: 0 40px;  /* mismo efecto pero SIN romper el ancho */
+    margin: 0 auto;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.boton-wsp {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: #f6aa19; /* color del botón tipo WhatsApp */
+    color: white;
+    padding: 20px 26px;
+    border-radius: 15px;
+    font-size: 16px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: Franklin Gothic Medium;
+}
+
+.imagen img {
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.navbar {
+  position: absolute;    /* Se coloca sobre el banner */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;           /* Se asegura de estar por encima */
+  padding: 15px;
+}
+
+/* ÍCONO HAMBURGUESA */
+.menu-icon {
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  color: #ffffff;
+}
+
+/* LISTA DEL MENÚ */
+.menu-list {
+  list-style: none;
+  padding: 15px;
+  margin: 10px 0 0 0;
+  display: none;
+  flex-direction: column;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+
+  background-color: #f6aa19;
+  width: 200px;              /* Ancho del cuadro */
+  border-radius: 10px;       /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Sombra elegante */
+
+  position: absolute;        /* Para que quede flotando */
+  top: 50px;                 /* Debajo de las tres rayitas */
+  left: 15px;                /* Un poco separado del borde */
+  z-index: 20;
+}
+
+.menu-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-list li:last-child {
+  border-bottom: none; /* Elimina la línea del último */
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+
+/* Cuando se despliega */
+.menu-list.show {
+  display: flex;
+}
+
+
+
+
+.aparece {
+    opacity: 0;
+    transform: translateY(20px);    /* inicia ligeramente abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.aparece.visible {
+    opacity: 1;
+    transform: translateY(0);       /* vuelve a su posición */
+}
+
+
+
+
+.nombre-doctora {
+    font-size: 30px;
+    font-family: Franklin Gothic Medium;
+    margin-left: 150px;    /* Igual que el texto que sigue */
+    margin-bottom: 0px;  /* Lo junta al texto */
+    color: #ffffff;
+}
+
+.seccion {
+    padding: 60px 0; /* necesario para que el fondo se vea */
+}
+
+/* Colores suaves de fondo */
+.seccion-sobre {
+    background-color: #e1faff; 
+}
+
+
+.seccion-servicios {
+    background-color: #053e5b; 
+}
+
+.seccion-info {
+    background-color: #e1faff; 
+}
+
+.boton-nosotros {
+  display: block;
+  margin: 0 auto;   /* Centra horizontalmente */
+  background-color: #053e5b;
+  color: #ffffff;
+  padding: 15px 30px;  /* arriba/abajo - izquierda/derecha */
+  font-size: 18px;     /* texto más grande */
+  border: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 10px;  /* lo acerca al texto */
+
+}
+
+.boton-nosotros:hover {
+  transform: scale(1.2); /* crece todo el bloque */
+  filter: brightness(1.2);
+}
+
+
+
+/* Contenedor general */
+.contenedor {
+   max-width: 1000px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;  /* AHORA ES VERTICAL */
+    align-items: center;     /* Centra texto y botón */
+    gap: 10px;               /* Espacio entre texto y botón */
+   
+    
+}
+
+.contenedor-cuadro {
+  background-color: #429cbe;   /* el color que quieras */
+   max-width: 800px;  /* puedes ajustarlo */
+    width: 100%;
+  
+  padding: 20px;               /* separación interna */
+  border-radius: 30px;         /* esquinas redondeadas (opcional) */
+  margin: 0 auto;              /* para centrar */
+  margin-bottom: 100px;
+}
+
+
+/* Texto a la izquierda */
+.texto {
+    max-width: 600px; /* ajusta a 500–700 según tu gusto */
+    width: 100%;
+    margin-top: 50px;
+    margin: 0 auto;   /* lo centra */
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+/* Imagen a la derecha 
+.imagen {
+    width: 40%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+    */
+
+.titulo-servicios {
+  text-align: center;       /* Centra el texto */
+  font-size: 4em;           /* Tamaño de letra grande */
+  margin-top: 150px;         /* Espacio entre el banner y el título */
+  margin-bottom: 150px;      /* Espacio entre el título y los botones */
+  font-family: Franklin Gothic Medium;  /* Tipografía limpia */
+  color: #e1faff;              /* Color del texto */
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px); /* movimiento suave */
+  }
+}
+
+.titulo-servicios::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background: #f6aa19;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.texto-redes {
+  margin-top: 10px;     /* espacio entre el botón y el texto */
+  font-size: 1.5em;     /* tamaño del texto */
+  color: #053e5b;          /* color del texto */
+  font-family: Franklin Gothic Medium;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  /* Banner más pequeño */
+  .banner {
+    height: 150px;
+  }
+
+  /* Títulos más pequeños */
+  .titulos,
+  .titulo-servicios {
+    font-size: 2.5em;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+
+  /* Subtítulos */
+  .subtitulo {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  /* Texto más angosto y legible */
+  .texto {
+    font-size: 16px;
+    padding: 0 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Cuadro contenedor */
+  .contenedor-cuadro {
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  /* Grid de botones → se vuelve 1 columna o 2 */
+  .contenedor-botones {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin: 40px auto;
+  }
+
+  /* Tamaño de botones */
+  .botones,
+  .redes {
+    width: 90px;
+    height: 90px;
+  }
+
+  /* Texto debajo de botones */
+  .texto-boton,
+  .texto-redes {
+    font-size: 1.1em;
+  }
+
+  /* Menú hamburguesa */
+  .menu-list {
+    width: 160px;
+    left: 10px;
+    padding: 10px;
+  }
+
+  .menu-list li {
+    padding: 8px 0;
+  }
+
+  /* Nombre doctora */
+  .nombre-doctora {
+    font-size: 22px;
+    margin-left: 40px;
+  }
+
+  /* WhatsApp button */
+  .boton-wsp {
+    bottom: 30px;
+    right: 20px;
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .titulos,
+  .titulo-servicios {
+    font-size: 2em;
+  }
+
+  .contenedor-botones {
+    grid-template-columns: repeat(1, 1fr);  /* UNA columna */
+  }
+
+  .botones,
+  .redes {
+    width: 80px;
+    height: 80px;
+  }
+
+  .texto-boton,
+  .texto-redes {
+    font-size: 1em;
+  }
+
+  .menu-icon {
+    font-size: 28px;
+  }
+}
+
+
+
+
+
+

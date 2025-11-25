@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodoncia</title>
+    <link rel="stylesheet" href="Periodoncia.css">
+</head>
+<body>
+    <div class="banner"></div>
+    <div class="submenu">
+
+    
+
+   
+        <h1 class="titulo aparece">Periodoncia</h1>
+    <h2 class="subtitulo aparece"> Afecciones de los tejidos blandos y duros</h2>
+            <div class="caja-submenu"> 
+        
+        <div>
+            <h3 class="subtitulos aparece">Información</h3>
+            <p class="texto aparece">
+               La periodoncia es la rama de la odontología encargada de prevenir, diagnosticar y tratar las enfermedades de las encías y de los tejidos que sostienen los dientes, incluyendo el hueso.
+            </p>
+
+
+            <h3 class="subtitulos aparece">Procedimientos</h3>
+            <ul class="texto aparece">
+                <li>Diagnóstico</li>
+                <li>Tratamiento de las afecciones de los tejidos blandos y duros del entorno del diente (encías, hueso)</li>
+                <li>Prevención de la pérdida dental</li>
+                <li>Tratamiento de enfermedades periodontales</li>
+            </ul>
+
+            <h3 class="subtitulos aparece">Beneficios</h3>
+            <p class="texto aparece">
+               La periodoncia ofrece beneficios como la reducción de la inflamación y el sangrado de las encías, la eliminación de bacterias que causan infecciones y la prevención de la pérdida de hueso alrededor de los dientes. Ayuda a mantener los dientes firmes, mejora el aliento, detiene el avance de enfermedades como la periodontitis y puede evitar la pérdida dental.
+            </p>
+            
+        </div>
+
+        <div class="imagen-submenu">
+            <img src="periodoncia.jpg" alt="Odontología General">
+        </div>
+
+
+    </div>
+         
+
+
+    <a href="https://wa.me/50662332482?text=Hola,%20quiero%20agendar%20una%20cita." 
+           class="boton-agendar">
+           Agenda Cita
+        </a>
+
+
+</div>
+
+
+
+<script>
+    const elementos = document.querySelectorAll('.aparece');
+
+    const observador = new IntersectionObserver((entradas) => {
+        entradas.forEach(entrada => {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+
+    elementos.forEach(el => observador.observe(el));
+</script>
+
+
+
+
+    
+</body>
+</html>
+
+    

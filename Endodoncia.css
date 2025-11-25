@@ -1,0 +1,127 @@
+html, body {
+    margin: 0; /*elimina los margenes que trae por defecto el buscador*/
+    padding: 0;
+    background-color: #e1faff;
+  }
+  
+
+.banner {
+    background-image: url('banner_Mesa\ de\ trabajo\ 1.png');  /* Imagen puesta desde CSS */
+    background-size: cover;                /* Cubre todo el espacio */
+    background-position: center;           /* Centrada */
+    height: 220px;                         /* Altura del banner */
+    width: 100%;         
+
+  }
+
+
+.titulo {
+    text-align: center;       /* Centra el texto */
+  font-size: 4em;           /* Tamaño de letra grande */
+  margin-top: 150px;         /* Espacio entre el banner y el título */
+  margin-bottom: 100px;      /* Espacio entre el título y los botones */
+  font-family: Franklin Gothic Medium;  /* Tipografía limpia */
+  color: #429cbe;              /* Color del texto */
+  animation: flotar 3s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px); /* movimiento suave */
+  }
+}
+
+.titulo::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 3px;
+  background: #f6aa19;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+.subtitulo {
+    text-align: center;       /* Centra el texto */
+  font-size: 28px;           /* Tamaño de letra grande */
+  font-family: Franklin Gothic Medium;  /* Tipografía limpia */
+  color: #429cbe;     
+  margin-bottom: 100px;
+}
+
+
+.submenu {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Pone texto a la izquierda y la imagen a la derecha */
+.caja-submenu {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+     position: relative;
+}
+
+/* Texto a la izquierda */
+.subtitulos {
+    flex: 1;
+    text-align: left;
+    color: #053e5b;
+    font-family: Franklin Gothic Medium;
+    font-size: 25px;
+}
+.texto {
+    flex: 1;
+    text-align: left;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 40px ;
+}
+
+.imagen-submenu {
+    margin-left: auto;
+}
+/* Imagen a la derecha */
+.imagen-submenu img {
+    width: 350px;
+    border-radius: 10px;
+    object-fit: cover;
+
+    
+}
+
+
+.boton-agendar {
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+    background-color: #f6aa19; /* color del botón tipo WhatsApp */
+    color: white;
+    padding: 30px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: Franklin Gothic Medium;
+}
+
+.aparece {
+    opacity: 0;
+    transform: translateY(20px);    /* inicia ligeramente abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.aparece.visible {
+    opacity: 1;
+    transform: translateY(0);       /* vuelve a su posición */
+}
+
+.seccion {
+    padding: 60px 0; /* necesario para que el fondo se vea */
+}
+
