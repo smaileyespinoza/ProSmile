@@ -9,13 +9,17 @@ html {
   
 
 .banner {
-    background-image: url('banner pagina_Mesa de trabajo 1.jpg');  /* Imagen puesta desde CSS */
-    background-size: cover;                /* Cubre todo el espacio */
-    background-position: center;           /* Centrada */
-    height: 220px;                         /* Altura del banner */
-    width: 100%;         
+    width: 100%;
+    height: 220px;
+    overflow: hidden; /* evita que la imagen se salga */
+}
 
-  }
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* replica el background-size: cover */
+    object-position: center; /* replica el background-position */
+}
 
 
   /*CONTENEDORES*/
@@ -398,6 +402,7 @@ html {
 * {
   box-sizing: border-box;
 }
+
 
 
 
